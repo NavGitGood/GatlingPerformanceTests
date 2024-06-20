@@ -1,0 +1,9 @@
+image: gradle:8-jdk17
+
+build:
+  script: "gradle clean gatlingRun"
+  artifacts:
+    when: always
+    paths:
+      - build/reports/gatling
+    expire_in: 2 days
